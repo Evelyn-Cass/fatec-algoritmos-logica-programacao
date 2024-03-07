@@ -3,6 +3,7 @@ Var
    salarioBruto,salarioLiquido, salarioDescontadoInss:real
    inss,faixaFinal:real
    impostoRenda:real
+   descontoTotal:real
 
 
 Inicio
@@ -75,12 +76,14 @@ Inicio
    fimse
 
    salarioLiquido <- salarioDescontadoInss - impostoRenda
+   descontoTotal <- inss + impostoRenda
 
    Escreval("                 RESULTADO:")
    Escreval("---------------------------------------------")
    Escreval("Salário BRUTO: R$",salarioBruto)
    Escreval("INSS: R$",inss)
    Escreval("Imposto de Renda: R$",impostoRenda)
+   Escreval("Desconto Total: R$",descontoTotal)
    Escreval("Salário Líquido: R$",salarioLiquido)
    Escreval("---------------------------------------------")
 
