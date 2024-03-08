@@ -1,10 +1,10 @@
 Algoritmo "SALARIO_LIQUIDO"
 Var
-   salarioBruto,salarioLiquido, salarioDescontadoInss:real
+
+   salarioBruto, salarioLiquido, salarioDescontadoInss:real
    inss,faixaFinal:real
    impostoRenda:real
    descontoTotal:real
-
 
 Inicio
 
@@ -20,7 +20,6 @@ Inicio
       inss <- inss + (3785.97 * 0.14) //Faixa 4
 
    senao
-
       Se(salarioBruto >  4000.03)entao
 
          inss  <- 1412 * 0.075   //Faixa 1
