@@ -22,27 +22,21 @@ Inicio
       LimpaTela
 
       Se (numero1 = numero2) entao
-
          Escreval("Os números são identicos!")
          i <- Falso
-
-
       FimSe
-
       Se (numero1 > numero2) entao
          Escreval("Ordem Decrescente!")
       FimSe
-
       Se (numero1 < numero2) entao
          Escreval("Ordem Crescente!")
       FimSe
 
       Escreval("")
 
-
    FimEnquanto
 
-   Escreval("Programa Finalizado")
+   Escreval("Programa Finalizado!")
 
 
 Fimalgoritmo
