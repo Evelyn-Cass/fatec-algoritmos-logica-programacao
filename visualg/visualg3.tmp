@@ -1,48 +1,59 @@
-Algoritmo "ORDEM_NUMEROS"
+Algoritmo "CALCULADORA_SIMPLES"
 
 Var
-   numero1,numero2:inteiro
-   i:logico
-
+   resultado,valor1,valor2:real
+   opcao:inteiro
 Inicio
+   repita
+      repita
+         Escreval("           Bem vindo a Calculadora!")
+         Escreval("-----------------------------------------------")
+         Escreval("Operações disponíveis:")
+         Escreval("1 - Soma")
+         Escreval("2 - Substração")
+         Escreval("3 - Multiplicação")
+         Escreval("4 - Divisão")
+         Escreval("0 - Sair")
+         Escreval("-----------------------------------------------")
+         Escreval("Digite o número referente a operação desejada:")
+         Leia(opcao)
+         LimpaTela
+      ate (opcao < 5) e (opcao >= 0)
 
-   i <- verdadeiro
+      Se (opcao <> 0) entao
+         Escreval("Entre o primeiro valor:")
+         Leia(valor1)
+         LimpaTela
 
-   Enquanto (i = verdadeiro) faca
-      numero1 <-0
-      numero2 <-0
+         Escreval("Entre o segundo valor:")
+         Leia(valor2)
+         LimpaTela
 
-      Escreval("Digite o primeiro número:")
-      Leia(numero1)
-      LimpaTela
+         Se (opcao = 1) entao
+            resultado <- valor1 + valor2
+            Escreval(valor1," +",valor2," =",resultado)
 
+         fimSe
 
-      Escreval("Digite o segundo número:")
-      Leia(numero2)
-      LimpaTela
+         Se (opcao = 2) entao
+            resultado <- valor1 - valor2
+            Escreval(valor1," -",valor2," =",resultado)
+         fimSe
 
-      Se (numero1 = numero2) entao
+         Se (opcao = 3) entao
+            resultado <- valor1 * valor2
+            Escreval(valor1," x",valor2," =",resultado)
+         fimSe
 
-         Escreval("Os números são identicos!")
-         i <- Falso
+         Se (opcao = 4) entao
+            resultado <- valor1 / valor2
+            Escreval(valor1," ÷",valor2," =",resultado)
+         fimSe
 
-
-      FimSe
-
-      Se (numero1 > numero2) entao
-         Escreval("Ordem Decrescente!")
-      FimSe
-
-      Se (numero1 < numero2) entao
-         Escreval("Ordem Crescente!")
-      FimSe
-
-      Escreval("")
+      fimSe
+   ate (opcao = 0)
 
 
-   FimEnquanto
-
-   Escreval("Programa Finalizado")
 
 
 Fimalgoritmo
