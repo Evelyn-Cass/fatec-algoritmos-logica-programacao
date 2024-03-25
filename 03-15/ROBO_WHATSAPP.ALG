@@ -20,7 +20,7 @@ Var
    valorAReceber:real
    valorTroco:real
 
-Procedimento cardapio
+Procedimento cardapioSalgados
 Inicio
    Escreval("            Cardápio:")
    Escreval("---------------------------------")
@@ -119,27 +119,29 @@ Inicio
       LimpaTela
 
       Se (opcaoMenuPrincipal = 1) Entao
-         cardapio
-         Escreval("Envie uma tecla para continuar")
+         cardapioSalgados
+         Escreval("Aperte a tecla ENTER para continuar")
          Leia(pause)
          LimpaTela
       FimSe
       Se (opcaoMenuPrincipal=2) Entao
 
-         Enquanto (opcaoProduto<1) ou (opcaoProduto>10) faca
-            cardapio
+         Repita
+            cardapioSalgados
             Escreval("Digite o número referente ao produto desejado:")
             Leia(opcaoProduto)
             LimpaTela
-         fimEnquanto
+         ate (opcaoProduto>1) ou (opcaoProduto<10)
          informacoesProduto
 
-         Escreval("Quantidade:")
-         Leia(quantidade)
-         valorPedido <- quantidade * valorProduto
-         taxaEntrega <- valorPedido * 0.1
-         valorTotal <- valorPedido + taxaEntrega
-         LimpaTela
+         Repita
+            Escreval("Quantidade:")
+            Leia(quantidade)
+            valorPedido <- quantidade * valorProduto
+            taxaEntrega <- valorPedido * 0.1
+            valorTotal <- valorPedido + taxaEntrega
+            LimpaTela
+         ate (quantidade <> 0)
 
          Escreval("                   Pedido:")
          Escreval("-----------------------------------------------")
@@ -157,6 +159,7 @@ Inicio
          Se (confirmacao = "S") Ou (confirmacao = "s") Entao
 
             formasPagamento
+            Escreval("Digite o número referente à forma de pagamento desejada:")
             Leia(opcaoPagamento)
             LimpaTela
 
@@ -169,7 +172,7 @@ Inicio
                Se (opcaoTroco = "S") Ou (opcaoTroco = "s") Entao
 
                   repita
-                     Escreval("Será necessário o troco para que valor?")
+                     Escreval("Será necessário o troco para o valor de R$",valorTotal,"?")
                      Leia(valorAReceber)
                      LimpaTela
                   ate (valorAReceber >= valorTotal)
@@ -178,7 +181,7 @@ Inicio
                   Escreval("Valor Total: R$",valorTotal)
                   Escreval("Valor à Pagar: R$",valorAReceber)
                   Escreval("Valor do Troco: R$",valorTroco)
-                  Escreval("Envie uma tecla para continuar")
+                  Escreval("Aperte Enter para continuar")
                   Leia(pause)
                   LimpaTela
                FimSe
@@ -186,27 +189,27 @@ Inicio
 
 
             Escreval("Seu pedido foi confirmado e saiu para entrega!")
-            Escreval("Envie uma tecla para continuar")
+            Escreval("Aperte a tecla ENTER para continuar")
             Leia(pause)
             LimpaTela
 
 
          Senao
             Escreval("Compra Cancelada!")
-            Escreval("Envie uma tecla para continuar")
+            Escreval("Aperte a tecla ENTER para continuar")
             Leia(pause)
             LimpaTela
          FimSe
       FimSe
       Se (opcaoMenuPrincipal=3) Entao
          formasPagamento
-         Escreval("Envie uma tecla para continuar")
+         Escreval("Aperte a tecla ENTER para continuar")
          Leia(pause)
          LimpaTela
       FimSe
       Se (opcaoMenuPrincipal=4) Entao
          Escreval("Todos os pedidos foram entregues!")
-         Escreval("Envie uma tecla para continuar")
+         Escreval("Aperte a tecla ENTER para continuar")
          Leia(pause)
          LimpaTela
       FimSe

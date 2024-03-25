@@ -40,9 +40,9 @@ Inicio
    Escreval("------------------------")
 
    Para i de 1 ate 10 faca
-      Escreval("Aluno(a):",nome[i])
-      Escreval("1ª nota:",nota1[i])
-      Escreval("2ª nota:",nota2[i])
+      Escreval("Aluno(a):",nome[i]:5:2)
+      Escreval("1ª nota:",nota1[i]:5:2)
+      Escreval("2ª nota:",nota2[i]:5:2)
       Escreval("Média:",media[i]:5:2)
       Escreval("------------------------")
    fimPara
