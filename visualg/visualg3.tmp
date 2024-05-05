@@ -5,10 +5,33 @@ Var
    jogador: caractere
    i, j, jogada, resto:inteiro
    fim, verificacao:logico
+
+Procedimento mostrarJogo
 Inicio
+   Escreval("Jogo da Velha!")
+   Escreval
 
    para i de 1 ate 3 faca
       para j de 1 ate 3 faca
+         se ( j <> 3) entao
+            Escreva(" ",jogo[i,j],"  |")
+         senao
+            Escreva(" ",jogo[i,j],"  ")
+         fimSe
+      fimPara
+      se ( i <> 3) entao
+         Escreval
+         Escreval("--------------")
+      fimSe
+   fimPara
+   Escreval
+   Escreval
+FimProcedimento
+
+Inicio
+
+   Para i de 1 ate 3 faca
+      Para j de 1 ate 3 faca
          jogo[i,j] <- " "
       fimPara
    fimPara
@@ -16,79 +39,72 @@ Inicio
    Para jogada de 1 até 9 faca
 
       resto <- jogada mod 2
-      Se (resto = 0) então
+      Se (resto = 0) entao
          jogador <- "X"
       Senao
          jogador <- "O"
       fimSe
-      Escreval("Jogo da Velha!")
-      Escreval
-
-      para i de 1 ate 3 faca
-         para j de 1 ate 3 faca
-            se ( j <> 3) entao
-               Escreva(" ",jogo[i,j],"  |")
-            senao
-               Escreva(" ",jogo[i,j],"  ")
-            fimSe
-         fimPara
-         se ( i <> 3) entao
-            Escreval
-            Escreval("--------------")
-         fimSe
-      fimPara
-
-      Escreval
+      mostrarJogo
       Escreval("JOGADOR ",jogador)
       Escreval("Qual posição você deseja?")
 
       verificacao <- falso
       Repita
          Repita
-            Escreval("Informe a linha:")
+            Escreval("Informe o número da linha:")
             leia(linha)
+
+            Se (linha <= 0) ou (linha >= 4) entao
+
+               LimpaTela
+               mostrarJogo
+               Escreval("Linha inválida!")
+               Escreval("A linha deve ser 1, 2 ou 3")
+               Escreval("JOGADOR ",jogador)
+
+            fimSe
+
          até (linha > 0) e (linha < 4)
 
+         LimpaTela
+
+         mostrarJogo
+         Escreval("JOGADOR ",jogador)
+         Escreval("Qual posição você deseja?")
+
          Repita
-            Escreval("Informe a coluna:")
+            Escreval("Informe o número da coluna:")
             leia(coluna)
-         até (linha > 0) e (linha < 4)
+
+            se (coluna <= 0) ou (coluna >= 4) então
+               LimpaTela
+               mostrarJogo
+               Escreval("Coluna inválida!")
+               Escreval("A coluna deve ser 1, 2 ou 3")
+               Escreval("JOGADOR ",jogador)
+            fimSe
+
+
+         ate (coluna > 0) e (coluna < 4)
 
          se (jogo[linha,coluna] <> " ") então
             LimpaTela
 
-            Escreval("Jogo da Velha!")
-            Escreval
-            para i de 1 ate 3 faca
-               para j de 1 ate 3 faca
-                  se ( j <> 3) entao
-                     Escreva(" ",jogo[i,j],"  |")
-                  senao
-                     Escreva(" ",jogo[i,j],"  ")
-                  fimSe
-               fimPara
-               se ( i <> 3) entao
-                  Escreval
-                  Escreval("--------------")
-               fimSe
-            fimPara
-            Escreval
-            Escreval("Posição Ocupada!!")
+            mostrarJogo
+            Escreval("A Posição [",linha,",",coluna,"] está ocupada!")
             Escreval("JOGADOR ",jogador)
-            Escreval("Qual posição você deseja?")
+            Escreval("Informe uma posição desocupada.")
 
 
-         senão
+         senao
             verificacao <- verdadeiro
             jogo[linha,coluna] <- jogador
          fimse
 
-      até (verificacao =  verdadeiro)
+      ate (verificacao =  verdadeiro)
       LimpaTela
 
-
-
-      para i de 1 até 3 faça
+      Para i de 1 até 3 faça
          Se (jogo[i,1] <> " ") e (jogo[i,1] = jogo[i,2]) e (jogo[i,2] = jogo[i,3]) então
             fim <- verdadeiro
          fimse
@@ -103,44 +119,13 @@ Inicio
          fim <- verdadeiro
       fimse
 
-      se fim = verdadeiro então
-         Escreval("Jogo da Velha!")
-         Escreval
-         para i de 1 ate 3 faca
-            para j de 1 ate 3 faca
-               se ( j <> 3) entao
-                  Escreva(" ",jogo[i,j],"  |")
-               senao
-                  Escreva(" ",jogo[i,j],"  ")
-               fimSe
-            fimPara
-            se ( i <> 3) entao
-               Escreval
-               Escreval("--------------")
-            fimSe
-         fimPara
-         Escreval
+      se fim = verdadeiro entao
+         mostrarJogo
          Escreval ("Jogador '",jogador ,"' GANHOU!")
-FimAlgoritmo
-fimSe
-
-fimpara
-Escreval("Jogo da Velha!")
-Escreval
-para i de 1 ate 3 faca
-   para j de 1 ate 3 faca
-      se ( j <> 3) entao
-         Escreva(" ",jogo[i,j],"  |")
-      senao
-         Escreva(" ",jogo[i,j],"  ")
+         FimAlgoritmo
       fimSe
-   fimPara
-   se ( i <> 3) entao
-      Escreval
-      Escreval("--------------")
-   fimSe
-fimPara
-Escreval
-Escreval("DEU VELHA!")
 
+   fimpara
+   mostrarJogo
+   Escreval("DEU VELHA!")
 Fimalgoritmo

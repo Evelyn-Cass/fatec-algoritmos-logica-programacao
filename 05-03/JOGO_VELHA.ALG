@@ -39,6 +39,7 @@ Inicio
       fimPara
 
       Escreval
+      Escreval
       Escreval("JOGADOR ",jogador)
       Escreval("Qual posição você deseja?")
 
@@ -72,6 +73,7 @@ Inicio
                   Escreval("--------------")
                fimSe
             fimPara
+            Escreval
             Escreval
             Escreval("Posição Ocupada!!")
             Escreval("JOGADOR ",jogador)
@@ -120,27 +122,29 @@ Inicio
             fimSe
          fimPara
          Escreval
+         Escreval
          Escreval ("Jogador '",jogador ,"' GANHOU!")
-FimAlgoritmo
-fimSe
+         FimAlgoritmo
+      fimSe
 
-fimpara
-Escreval("Jogo da Velha!")
-Escreval
-para i de 1 ate 3 faca
-   para j de 1 ate 3 faca
-      se ( j <> 3) entao
-         Escreva(" ",jogo[i,j],"  |")
-      senao
-         Escreva(" ",jogo[i,j],"  ")
+   fimpara
+   Escreval("Jogo da Velha!")
+   Escreval
+   para i de 1 ate 3 faca
+      para j de 1 ate 3 faca
+         se ( j <> 3) entao
+            Escreva(" ",jogo[i,j],"  |")
+         senao
+            Escreva(" ",jogo[i,j],"  ")
+         fimSe
+      fimPara
+      se ( i <> 3) entao
+         Escreval
+         Escreval("--------------")
       fimSe
    fimPara
-   se ( i <> 3) entao
-      Escreval
-      Escreval("--------------")
-   fimSe
-fimPara
-Escreval
-Escreval("DEU VELHA!")
-
+   Escreval
+   Escreval
+   Escreval("DEU VELHA!")
+fimSe
 Fimalgoritmo
