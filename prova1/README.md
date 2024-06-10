@@ -1,4 +1,4 @@
-# Prova 1 – Algoritmos e Lógica de Programação -
+# Prova 1 
 **Data:** 19/04/2024
 
 **Professor:** Me. Tiago Antonio da Silva
