@@ -1,5 +1,5 @@
 Algoritmo "HOSPITAL"
-
+//Evelyn Cassinotte
 
 //Definindo Registro
 tipo _paciente = registro

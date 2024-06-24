@@ -7,13 +7,13 @@
 - Leiam a prova com atenção e discutam as soluções em voz baixa.
 - A prova é em dupla e com consulta apenas entre o material da dupla.
 - Ao término da prova, cada um deverá entrar no Teams e enviar sua cópia do algoritmo desenvolvido.
-- A prova se inicia às 9h30me terminará às 13h.
+- A prova se inicia às 9h30 e terminará às 13h.
 - Não serão aceitos envios tardios.
 - Tempo mínimo de permanência: 1h30m.
 - Dúvidas? Retorne ao primeiro item.
 
 ## QUESTÕES
-Consideremo  desenvolvimento  de  um  sistema  para  uma  loja  de  roupas.  
+Consideremos o desenvolvimento  de  um  sistema  para  uma  loja  de  roupas.  
 No sistema será possível navegar através de um menu para:
 - Ver os itens e quantidades disponíveis no estoque;
 - Realizar vendasdos itens disponíveis no estoque;
